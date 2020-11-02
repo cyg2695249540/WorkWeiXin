@@ -26,4 +26,4 @@ class SearchPage(BasePage):
         return PersonalInformationPage(self.driver)
 
     def get_result(self):
-        self.find_and_get_text()
+        self.find_and_get_text(
