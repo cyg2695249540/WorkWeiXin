@@ -54,7 +54,7 @@ class TestDemo:
                     break
             except:
                 print("再次点击")
-        self.driver.find_element(By.CSS_SELECTOR, "[id='username']").send_keys("ccc")
+        self.driver.find_element(By.CSS_SELECTOR, "[id='username']").send_keys("")
         self.driver.find_element(By.CSS_SELECTOR, "[id='memberAdd_acctid']").send_keys(1234567)
         self.driver.find_element(By.CSS_SELECTOR, "[id='memberAdd_phone']").send_keys(13711111113)
         self.driver.find_element(By.CSS_SELECTOR, ".js_btn_save").click()
