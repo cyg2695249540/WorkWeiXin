@@ -25,5 +25,3 @@ class SearchPage(BasePage):
             eles[1].click()
         return PersonalInformationPage(self.driver)
 
-    def get_result(self):
-        self.find_and_get_text(

@@ -28,6 +28,7 @@ class TestAddepartment:
         self.main.driver.quit()
 
     @allure.feature("添加部门成功")
+    @pytest.mark.flaky(reruns=1)
     @pytest.mark.parametrize("departmentname", get_datas()[0], ids=get_datas()[1])
     def test_addepartment(self, departmentname):
         departmentnamelist = self.main.goto_contactpage().goto_addepartment_page().addepartment(
@@ -35,6 +36,7 @@ class TestAddepartment:
         assert departmentname in departmentnamelist
 
     @allure.feature("添加部门失败")
+    @pytest.mark.flaky(reruns=1)
     @pytest.mark.parametrize("departmentname", get_datas()[2], ids=get_datas()[3])
     def test_addepartment_cancel(self, departmentname):
         departmentnamelist = self.main.goto_contactpage().goto_addepartment_page().addepartment(
