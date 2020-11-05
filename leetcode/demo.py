@@ -3,15 +3,14 @@
 # @FILE     : demo.py
 # @Author   : Pluto.
 # @Time     : 2020/11/2 19:15
-listA = ['python', '一', '动', '态', '是', '言', '言', '语', '语', '门']
 
 
-def demo(list):
-    resultList  = []
-    for i in list:
-        if i not in resultList :
-            resultList .append(i)
-    return resultList
+class Test:
+    listA = ['python', '是', '一', '门', '动', '态', '语', '言', '言', '语']
 
-ex=demo(listA)
-print(ex)
+    def test_demo(self):
+        resultList = []
+        for i in self.listA:
+            if i not in resultList:
+                resultList.append(i)
+        print(resultList)

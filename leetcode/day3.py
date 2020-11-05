@@ -24,20 +24,22 @@ A[i] > A[i+1] > ... > A[A.length - 1]
 链接：https://leetcode-cn.com/problems/valid-mountain-array
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 """
-from typing import List
+import pytest
 
 A = [0, 3, 2, 1]
 
-def day3( A: List[int]) -> bool:
-    N = len(A)
+def tmountainslist(list):
+    N = len(list)
     i = 0
-    while i + 1 < N and A[i] < A[i + 1]:
-        i = i + 1
+    while i + 1 < N and list[i] < list[i + 1]:
+        i += 1
     if i == 0 or i == N - 1:
         return False
-    while i + 1 < N and A[i] > A[i + 1]:
+    while i + 1 < N and list[i] > list[i + 1]:
         i += 1
     return i == N - 1
 
-ex=day3(A)
-print(ex)
+a=tmountainslist(A)
+print(a)
+
+

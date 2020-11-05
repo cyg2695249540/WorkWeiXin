@@ -14,17 +14,15 @@ ex:1
 """
 from typing import List
 
-nums = [2, 7, 11, 15]
-target = 9
 
+class Test:
+    _nums = [2, 7, 11, 15]
+    _target = 9
 
-def day1(nums: List[int], target: int) -> List[int]:
-    dict = {}
-    for k, v in enumerate(nums):
-        if target - v in dict:
-            return [dict[target - v], k]
-        dict[v] = k
+    def test_addnums(self):
+        dic = {}
+        for k, v in enumerate(self._nums):
+            if self._target - v in dic:
+                print([dic[self._target - v], k])
+            dic[v] = k
 
-
-ex = day1(nums, target)
-print(ex)

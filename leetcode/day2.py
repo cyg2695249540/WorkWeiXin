@@ -20,16 +20,11 @@ ex:349
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 """
 from typing import List
+class Test:
+    _nums1 = [1, 2, 2, 1]
+    _nums2 = [2, 2]
+    def testset(self):
+        set1 = set(self._nums1)
+        set2 = set(self._nums2)
+        print(list(set1 & set2))
 
-nums1 = [1, 2, 2, 1]
-nums2 = [2, 2]
-
-
-def day2(nums1: List[int], nums2: List[int]) -> List[int]:
-    set1 = set(nums1)
-    set2 = set(nums2)
-    return list(set1 & set2)
-
-
-ex = day2(nums1, nums2)
-print(ex)
